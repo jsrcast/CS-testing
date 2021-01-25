@@ -1,0 +1,1502 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="https://w3id.org/ibp/FMUont"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="https://w3id.org/ibp/FMUont">
+    <Prefix name="" IRI="https://w3id.org/ibp/FMUont#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="vann" IRI="http://purl.org/vocab/vann/"/>
+    <Prefix name="voaf" IRI="http://purl.org/vocommons/voaf#"/>
+    <Prefix name="dcterms" IRI="http://purl.org/dc/terms/"/>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dcterms:creator"/>
+        <IRI>https://www.researchgate.net/profile/Georg_Schneider3</IRI>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dcterms:creator"/>
+        <Literal>Georg Ferdinand Schneider</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dcterms:creator"/>
+        <Literal>Matthias Mitterhofer</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dcterms:description"/>
+        <Literal xml:lang="en">The ontology and its use is described in:
+
+			Mitterhofer, M., Schneider, G. F., Stratb%C3%BCcker, S. and Sedlbauer, K. (2017) An FMI-enabled methodology for modular building performance simulation based on Semantic Web Technologies. In: Building and Environment (Online) DOI: 10.1016/j.buildenv.2017.08.021.
+
+            Mitterhofer, M., Schneider, G. F., Stratb%C3%BCcker, S. and Steiger, S. (2017) Semantics For Assembling Modular Network Topologies in FMI-Based Building Performance Simulation. In: Proceedings of BuildingSimulation. San Francisco, USA.</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dcterms:identifier"/>
+        <Literal>https://w3id.org/ibp/FMUont#</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dcterms:issued"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">2016-12-01</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dcterms:license"/>
+        <IRI>http://creativecommons.org/licenses/by-sa/4.0</IRI>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dcterms:modified"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">2017-08-21</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dcterms:rights"/>
+        <Literal xml:lang="en">Copyright (c) 2018, Fraunhofer Institute for Building Physics, Nuremberg and Holzkirchen, Germany. This ontology is distributed under a Creative Commons Attribution 
+			Share Alike License (CC BY-SA 4.0) http://creativecommons.org/licenses/by-sa/4.0</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dcterms:title"/>
+        <Literal xml:lang="en">FMUont - An ontology to formally specify Functional Mockup-Units (FMU).</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="vann:preferredNamespacePrefix"/>
+        <Literal>FMUont</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="vann:preferredNamespaceUri"/>
+        <IRI>#</IRI>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal xml:lang="en">FMUont specifies concepts and relationships of Functional Mock-Up Units.</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <Literal xml:lang="en">FMUont</Literal>
+    </Annotation>
+    <Declaration>
+        <Class IRI="#AnnotatedElement"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#BIMTopologyElement"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#FMU"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#FMUontRoot"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#InputVariable"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Medium"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#OutputVariable"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Parameter"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Quantity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Room"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SemanticType"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SimulatedSystem"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Simulation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Space"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ThermalZone"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Unit"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#belongsTo"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasAffiliationTo"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasInputVariable"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasMedium"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasOutputVariable"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasParameter"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasQuantity"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasRoomAffiliationTo"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasSemanticType"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasSimulatedSystem"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasSpace"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasUnit"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasZoneAffiliationTo"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isComposedOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isConnectedWith"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasIdentifier"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#AbsoluteHumidity"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Air"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#AirChangeRate"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Altitude"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Area"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Azimuth"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Brine"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#BuildingAutomation"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#BuildingEnvelope"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#BuildingEquipment"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#C"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#CarbonDioxide"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Cleaning"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ConductionEnergy"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ConductionEnergyDensity"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ConductionFlowRate"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ConductionFlowRateDensity"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ConvectionEnergy"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ConvectionEnergyDensity"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ConvectionFlowRate"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ConvectionFlowRateDensity"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Cooling"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Declination"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#DeepGround"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Dehumidification"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Density"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Depth"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Diameter"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#DiffuseIrradiance"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#DirectIrradiance"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Direction"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Distance"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ElectricEnergy"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ElectricPower"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Elevation"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#EndEnergy"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Enthalpy"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Environment"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Equipment"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ExteriorWallInside"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ExteriorWallOutside"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#GasFraction"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#GlobalIrradiance"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Ground"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#GroundSurface"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#HVAC"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Heating"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#HourAngle"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Humidification"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Illuminance"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Indicator"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#InfraredIrradiance"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#InteriorWall"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#J"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#K"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Lighting"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Location"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Longitude"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Mass"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#MassFlow"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#MeanRadiantTemperature"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#NoMedium"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#NoUnit"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Number"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Occupancy"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#OperationEnergy"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#OperativeTemperature"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#PMV"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#PPD"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Pa"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#People"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#PrecipitationDepth"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Pressure"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#PrimaryEnergy"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#RadiationEnergy"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#RadiationEnergyDensity"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#RadiationFlux"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#RadiationFluxDensity"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Radius"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Rain"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#RelativeHumidity"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Setpoint"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ShadeAndBlind"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Signal"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Sky"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Snow"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SpaceCondition"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Temperature"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Thickness"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#TotalEnergy"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#TotalEnergyDensity"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#TotalEnergyFlowRate"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#TotalEnergyFlowRateDensity"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Velocity"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Ventilation"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Volume"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#VolumetricFlowRate"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#W"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Wall"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Water"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#WeatherData"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Wh"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Width"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Wind"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Window"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#WindowInside"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#WindowOutside"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Zenith"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ZonalAirflow"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ac"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#bar"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#cm"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#cm2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#degrees"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#g"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ha"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#kJ"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#kW"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#kWh"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#kg"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#km"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#km2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#l"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#lx"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#m"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#m2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#m3"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#mbar"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#mm"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#percent"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ppm"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#rad"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#1/h"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#J/m2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#J/s"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#J/sm2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#W/m2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Wh/m2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#g/cm3"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#g/g"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#g/kg"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#g/l"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#kJ/m2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#kW/m2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#kWh/m2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#kg/g"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#kg/h"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#kg/kg"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#kg/l"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#kg/m3"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#kg/s"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#l/h"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#l/s"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#m/s"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#m3/h"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#m3/s"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dcterms:description"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="vann:preferredNamespacePrefix"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dcterms:creator"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dcterms:issued"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dcterms:identifier"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dcterms:license"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="vann:preferredNamespaceUri"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dcterms:title"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dcterms:modified"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dcterms:rights"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#AnnotatedElement"/>
+        <Class IRI="#FMUontRoot"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#BIMTopologyElement"/>
+        <Class IRI="#FMUontRoot"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FMU"/>
+        <Class IRI="#FMUontRoot"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#InputVariable"/>
+        <Class IRI="#AnnotatedElement"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Medium"/>
+        <Class IRI="#FMUontRoot"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#OutputVariable"/>
+        <Class IRI="#AnnotatedElement"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Parameter"/>
+        <Class IRI="#AnnotatedElement"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Quantity"/>
+        <Class IRI="#FMUontRoot"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Room"/>
+        <Class IRI="#Space"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SemanticType"/>
+        <Class IRI="#FMUontRoot"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SimulatedSystem"/>
+        <Class IRI="#FMUontRoot"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Simulation"/>
+        <Class IRI="#FMUontRoot"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Space"/>
+        <Class IRI="#FMUontRoot"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ThermalZone"/>
+        <Class IRI="#Space"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Unit"/>
+        <Class IRI="#FMUontRoot"/>
+    </SubClassOf>
+    <ClassAssertion>
+        <Class IRI="#Quantity"/>
+        <NamedIndividual IRI="#AbsoluteHumidity"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Medium"/>
+        <NamedIndividual IRI="#Air"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Quantity"/>
+        <NamedIndividual IRI="#AirChangeRate"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Quantity"/>
+        <NamedIndividual IRI="#Altitude"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Quantity"/>
+        <NamedIndividual IRI="#Area"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Quantity"/>
+        <NamedIndividual IRI="#Azimuth"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Medium"/>
+        <NamedIndividual IRI="#Brine"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SimulatedSystem"/>
+        <NamedIndividual IRI="#BuildingAutomation"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SimulatedSystem"/>
+        <NamedIndividual IRI="#BuildingEnvelope"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SimulatedSystem"/>
+        <NamedIndividual IRI="#BuildingEquipment"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Unit"/>
+        <NamedIndividual IRI="#C"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Medium"/>
+        <NamedIndividual IRI="#CarbonDioxide"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SemanticType"/>
+        <NamedIndividual IRI="#Cleaning"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Quantity"/>
+        <NamedIndividual IRI="#ConductionEnergy"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Quantity"/>
+        <NamedIndividual IRI="#ConductionEnergyDensity"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Quantity"/>
+        <NamedIndividual IRI="#ConductionFlowRate"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Quantity"/>
+        <NamedIndividual IRI="#ConductionFlowRateDensity"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Quantity"/>
+        <NamedIndividual IRI="#ConvectionEnergy"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Quantity"/>
+        <NamedIndividual IRI="#ConvectionEnergyDensity"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Quantity"/>
+        <NamedIndividual IRI="#ConvectionFlowRate"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Quantity"/>
+        <NamedIndividual IRI="#ConvectionFlowRateDensity"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SemanticType"/>
+        <NamedIndividual IRI="#Cooling"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Quantity"/>
+        <NamedIndividual IRI="#Declination"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Medium"/>
+        <NamedIndividual IRI="#DeepGround"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SemanticType"/>
+        <NamedIndividual IRI="#Dehumidification"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Quantity"/>
+        <NamedIndividual IRI="#Density"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Quantity"/>
+        <NamedIndividual IRI="#Depth"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Quantity"/>
+        <NamedIndividual IRI="#Diameter"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Quantity"/>
+        <NamedIndividual IRI="#DiffuseIrradiance"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Quantity"/>
+        <NamedIndividual IRI="#DirectIrradiance"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Quantity"/>
+        <NamedIndividual IRI="#Direction"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Quantity"/>
+        <NamedIndividual IRI="#Distance"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Quantity"/>
+        <NamedIndividual IRI="#ElectricEnergy"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Quantity"/>
+        <NamedIndividual IRI="#ElectricPower"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Quantity"/>
+        <NamedIndividual IRI="#Elevation"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Quantity"/>
+        <NamedIndividual IRI="#EndEnergy"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Quantity"/>
+        <NamedIndividual IRI="#Enthalpy"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SimulatedSystem"/>
+        <NamedIndividual IRI="#Environment"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SemanticType"/>
+        <NamedIndividual IRI="#Equipment"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Medium"/>
+        <NamedIndividual IRI="#ExteriorWallInside"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Medium"/>
+        <NamedIndividual IRI="#ExteriorWallOutside"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Quantity"/>
+        <NamedIndividual IRI="#GasFraction"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Quantity"/>
+        <NamedIndividual IRI="#GlobalIrradiance"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Medium"/>
+        <NamedIndividual IRI="#Ground"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Medium"/>
+        <NamedIndividual IRI="#GroundSurface"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SimulatedSystem"/>
+        <NamedIndividual IRI="#HVAC"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SemanticType"/>
+        <NamedIndividual IRI="#Heating"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Quantity"/>
+        <NamedIndividual IRI="#HourAngle"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SemanticType"/>
+        <NamedIndividual IRI="#Humidification"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Quantity"/>
+        <NamedIndividual IRI="#Illuminance"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Quantity"/>
+        <NamedIndividual IRI="#Indicator"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Quantity"/>
+        <NamedIndividual IRI="#InfraredIrradiance"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Medium"/>
+        <NamedIndividual IRI="#InteriorWall"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Unit"/>
+        <NamedIndividual IRI="#J"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Unit"/>
+        <NamedIndividual IRI="#K"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SemanticType"/>
+        <NamedIndividual IRI="#Lighting"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SemanticType"/>
+        <NamedIndividual IRI="#Location"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Quantity"/>
+        <NamedIndividual IRI="#Longitude"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Quantity"/>
+        <NamedIndividual IRI="#Mass"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Quantity"/>
+        <NamedIndividual IRI="#MassFlow"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Quantity"/>
+        <NamedIndividual IRI="#MeanRadiantTemperature"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Medium"/>
+        <NamedIndividual IRI="#NoMedium"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Unit"/>
+        <NamedIndividual IRI="#NoUnit"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Quantity"/>
+        <NamedIndividual IRI="#Number"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SemanticType"/>
+        <NamedIndividual IRI="#Occupancy"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Quantity"/>
+        <NamedIndividual IRI="#OperationEnergy"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Quantity"/>
+        <NamedIndividual IRI="#OperativeTemperature"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Quantity"/>
+        <NamedIndividual IRI="#PMV"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Quantity"/>
+        <NamedIndividual IRI="#PPD"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Unit"/>
+        <NamedIndividual IRI="#Pa"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SimulatedSystem"/>
+        <NamedIndividual IRI="#People"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Quantity"/>
+        <NamedIndividual IRI="#PrecipitationDepth"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Quantity"/>
+        <NamedIndividual IRI="#Pressure"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Quantity"/>
+        <NamedIndividual IRI="#PrimaryEnergy"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Quantity"/>
+        <NamedIndividual IRI="#RadiationEnergy"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Quantity"/>
+        <NamedIndividual IRI="#RadiationEnergyDensity"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Quantity"/>
+        <NamedIndividual IRI="#RadiationFlux"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Quantity"/>
+        <NamedIndividual IRI="#RadiationFluxDensity"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Quantity"/>
+        <NamedIndividual IRI="#Radius"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Medium"/>
+        <NamedIndividual IRI="#Rain"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Quantity"/>
+        <NamedIndividual IRI="#RelativeHumidity"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SemanticType"/>
+        <NamedIndividual IRI="#Setpoint"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SemanticType"/>
+        <NamedIndividual IRI="#ShadeAndBlind"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Quantity"/>
+        <NamedIndividual IRI="#Signal"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Medium"/>
+        <NamedIndividual IRI="#Sky"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Medium"/>
+        <NamedIndividual IRI="#Snow"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SemanticType"/>
+        <NamedIndividual IRI="#SpaceCondition"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Quantity"/>
+        <NamedIndividual IRI="#Temperature"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Quantity"/>
+        <NamedIndividual IRI="#Thickness"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Quantity"/>
+        <NamedIndividual IRI="#TotalEnergy"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Quantity"/>
+        <NamedIndividual IRI="#TotalEnergyDensity"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Quantity"/>
+        <NamedIndividual IRI="#TotalEnergyFlowRate"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Quantity"/>
+        <NamedIndividual IRI="#TotalEnergyFlowRateDensity"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Quantity"/>
+        <NamedIndividual IRI="#Velocity"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SemanticType"/>
+        <NamedIndividual IRI="#Ventilation"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Quantity"/>
+        <NamedIndividual IRI="#Volume"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Quantity"/>
+        <NamedIndividual IRI="#VolumetricFlowRate"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Unit"/>
+        <NamedIndividual IRI="#W"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Medium"/>
+        <NamedIndividual IRI="#Wall"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Medium"/>
+        <NamedIndividual IRI="#Water"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SemanticType"/>
+        <NamedIndividual IRI="#WeatherData"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Unit"/>
+        <NamedIndividual IRI="#Wh"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Quantity"/>
+        <NamedIndividual IRI="#Width"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Medium"/>
+        <NamedIndividual IRI="#Wind"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SemanticType"/>
+        <NamedIndividual IRI="#Window"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Medium"/>
+        <NamedIndividual IRI="#WindowInside"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Medium"/>
+        <NamedIndividual IRI="#WindowOutside"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Quantity"/>
+        <NamedIndividual IRI="#Zenith"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SimulatedSystem"/>
+        <NamedIndividual IRI="#ZonalAirflow"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Unit"/>
+        <NamedIndividual IRI="#ac"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Unit"/>
+        <NamedIndividual IRI="#bar"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Unit"/>
+        <NamedIndividual IRI="#cm"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Unit"/>
+        <NamedIndividual IRI="#cm2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Unit"/>
+        <NamedIndividual IRI="#degrees"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Unit"/>
+        <NamedIndividual IRI="#g"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Unit"/>
+        <NamedIndividual IRI="#ha"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Unit"/>
+        <NamedIndividual IRI="#kJ"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Unit"/>
+        <NamedIndividual IRI="#kW"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Unit"/>
+        <NamedIndividual IRI="#kWh"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Unit"/>
+        <NamedIndividual IRI="#kg"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Unit"/>
+        <NamedIndividual IRI="#km"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Unit"/>
+        <NamedIndividual IRI="#km2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Unit"/>
+        <NamedIndividual IRI="#l"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Unit"/>
+        <NamedIndividual IRI="#lx"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Unit"/>
+        <NamedIndividual IRI="#m"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Unit"/>
+        <NamedIndividual IRI="#m2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Unit"/>
+        <NamedIndividual IRI="#m3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Unit"/>
+        <NamedIndividual IRI="#mbar"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Unit"/>
+        <NamedIndividual IRI="#mm"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Unit"/>
+        <NamedIndividual IRI="#percent"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Unit"/>
+        <NamedIndividual IRI="#ppm"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Unit"/>
+        <NamedIndividual IRI="#rad"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Unit"/>
+        <NamedIndividual IRI="#1/h"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Unit"/>
+        <NamedIndividual IRI="#J/m2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Unit"/>
+        <NamedIndividual IRI="#J/s"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Unit"/>
+        <NamedIndividual IRI="#J/sm2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Unit"/>
+        <NamedIndividual IRI="#W/m2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Unit"/>
+        <NamedIndividual IRI="#Wh/m2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Unit"/>
+        <NamedIndividual IRI="#g/cm3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Unit"/>
+        <NamedIndividual IRI="#g/g"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Unit"/>
+        <NamedIndividual IRI="#g/kg"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Unit"/>
+        <NamedIndividual IRI="#g/l"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Unit"/>
+        <NamedIndividual IRI="#kJ/m2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Unit"/>
+        <NamedIndividual IRI="#kW/m2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Unit"/>
+        <NamedIndividual IRI="#kWh/m2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Unit"/>
+        <NamedIndividual IRI="#kg/g"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Unit"/>
+        <NamedIndividual IRI="#kg/h"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Unit"/>
+        <NamedIndividual IRI="#kg/kg"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Unit"/>
+        <NamedIndividual IRI="#kg/l"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Unit"/>
+        <NamedIndividual IRI="#kg/m3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Unit"/>
+        <NamedIndividual IRI="#kg/s"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Unit"/>
+        <NamedIndividual IRI="#l/h"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Unit"/>
+        <NamedIndividual IRI="#l/s"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Unit"/>
+        <NamedIndividual IRI="#m/s"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Unit"/>
+        <NamedIndividual IRI="#m3/h"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Unit"/>
+        <NamedIndividual IRI="#m3/s"/>
+    </ClassAssertion>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasSimulatedSystem"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasSpace"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#hasMedium"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#hasQuantity"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#hasSemanticType"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#hasUnit"/>
+    </FunctionalObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#belongsTo"/>
+        <Class IRI="#Room"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasInputVariable"/>
+        <Class IRI="#FMU"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasMedium"/>
+        <Class IRI="#AnnotatedElement"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasOutputVariable"/>
+        <Class IRI="#FMU"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasParameter"/>
+        <Class IRI="#FMU"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasQuantity"/>
+        <Class IRI="#AnnotatedElement"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasRoomAffiliationTo"/>
+        <Class IRI="#AnnotatedElement"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasSemanticType"/>
+        <Class IRI="#AnnotatedElement"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasSimulatedSystem"/>
+        <Class IRI="#FMU"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasSpace"/>
+        <Class IRI="#FMU"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasUnit"/>
+        <Class IRI="#AnnotatedElement"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasZoneAffiliationTo"/>
+        <Class IRI="#AnnotatedElement"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isComposedOf"/>
+        <Class IRI="#Simulation"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isConnectedWith"/>
+        <Class IRI="#InputVariable"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#belongsTo"/>
+        <Class IRI="#ThermalZone"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasInputVariable"/>
+        <Class IRI="#InputVariable"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasMedium"/>
+        <Class IRI="#Medium"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasOutputVariable"/>
+        <Class IRI="#OutputVariable"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasParameter"/>
+        <Class IRI="#Parameter"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasQuantity"/>
+        <Class IRI="#Quantity"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasRoomAffiliationTo"/>
+        <Class IRI="#Room"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasSemanticType"/>
+        <Class IRI="#SemanticType"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasSimulatedSystem"/>
+        <Class IRI="#SimulatedSystem"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasSpace"/>
+        <Class IRI="#Space"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasUnit"/>
+        <Class IRI="#Unit"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasZoneAffiliationTo"/>
+        <Class IRI="#ThermalZone"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isComposedOf"/>
+        <Class IRI="#FMU"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isConnectedWith"/>
+        <Class IRI="#OutputVariable"/>
+    </ObjectPropertyRange>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasIdentifier"/>
+        <Class IRI="#FMU"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasIdentifier"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
