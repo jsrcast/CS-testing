@@ -1,0 +1,17 @@
+@prefix fmuont: <https://w3id.org/ibp/FMUont> .
+@prefix sim: <http://example.com/mysimulation#> .
+
+sim:office a fmuont:FMU ;
+    fmuont:hasInputVariable sim:Q ;
+    fmuont:hasOutputVariable sim:TRooMea .
+
+sim:Q fmuont:Medium sim:NoMedium ;
+    fmuont:Quantity sim:TotalEnergyFlowRate ;
+    fmuont:SemanticType sim:Heating ;
+    fmuont:Unit sim:W .
+
+sim:TRooMea fmuont:Medium sim:Air ;
+    fmuont:Quantity sim:Temperature ;
+    fmuont:SemanticType sim:Setpoint ;
+    fmuont:Unit sim:C .
+

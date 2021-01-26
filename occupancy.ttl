@@ -1,0 +1,11 @@
+@prefix fmuont: <https://w3id.org/ibp/FMUont> .
+@prefix sim: <http://example.com/mysimulation#> .
+
+sim:occupancy a fmuont:FMU ;
+    fmuont:hasOutputVariable sim:SetPoint .
+
+sim:SetPoint fmuont:Medium sim:Air ;
+    fmuont:Quantity sim:Temperature ;
+    fmuont:SemanticType sim:Setpoint ;
+    fmuont:Unit sim:C .
+
